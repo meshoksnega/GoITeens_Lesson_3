@@ -4,30 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Марковані списки з тегами</title>
+    <title>Форма для заповнення даних користувача</title>
 </head>
 
 <body>
 
-    <h2>Список рядкових тегів:</h2>
-    <ul>
-        <li>&lt;a&gt;</li>
-        <li>&lt;b&gt;</li>
-        <li>&lt;em&gt;</li>
-        <li>&lt;strong&gt;</li>
-        <li>&lt;i&gt;</li>
-        <li>&lt;u&gt;</li>
-    </ul>
+    <h2>Заповніть дані користувача:</h2>
 
-    <h2>Список блокових тегів:</h2>
-    <ul>
-        <li>&lt;div&gt;</li>
-        <li>&lt;p&gt;</li>
-        <li>&lt;h1&gt;</li>
-        <li>&lt;h2&gt;</li>
-        <li>&lt;ul&gt;</li>
-        <li>&lt;ol&gt;</li>
-    </ul>
+    <form action="#" method="post">
+        <div>
+            <label for="name">Ім'я та прізвище:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <small>Формат: 10 цифр без пробілів і розділових знаків</small>
+        </div>
+        <div>
+            <label for="comment">Коментар:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Відправити</button>
+        </div>
+    </form>
 
 </body>
 
